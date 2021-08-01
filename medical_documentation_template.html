@@ -1,0 +1,230 @@
+<html>
+	<title>Emergency Medicine - Documentation Templates</title>
+	<script>
+		function condense_bloods(){
+			// Condenses bloods by removing spaces and auth lines
+			var bloods_raw = document.getElementById("bloods").value || "";
+			// Remove extra spaces:
+			for (i=0;i<8;i++){
+				bloods_raw = bloods_raw.replaceAll("  ", " ");
+			}
+			// Remove "Auth":
+			bloods_processed = bloods_raw.replace(" Auth", "");
+			// Paste result into the condensed field
+			document.getElementById("bloods-condensed").value = bloods_processed;
+		}
+	</script>
+</html>
+
+<body>
+	<h1>Emergency Medicine - Documentation Templates</h1>
+
+<h2 id="general-title">Adult General</h2>
+<textarea id="general" name="general" rows=20 cols=80>
+PC:
+1) 
+
+PCHx:
+- 
+- 
+- 
+- 
+- Denies: SOB, anosmia, haemoptysis, cough, sputum, leg pain, leg swelling
+- Denies: Chest pain, nocturnal SOB/PND, light headedness, palpitations
+- Denies: Nausea, vomiting, dysphagia, odynophagia, abdo pain, back pain, dysuria, diarrhoea, distension
+- Denies: Abnormal PV discharge, chance of pregnancy
+- Denies: Headache, seizure, LOC, vertigo, photophobia, neck pain, diplopia, visual loss, speech deficit, facial paraesthesia, arm paraesthes, arm weakness, leg paraesthes, leg weakness, saddle paraesthesia / numbness, otorrhoea, persistent rhinorrhoea, altered jaw occlusion
+- Denies: 
+
+
+PMHx:
+- 
+- 
+- 
+- 
+
+DHx:
+- 
+- 
+- 
+- 
+Allergies: NKDA
+
+SHx:
+- House, no carers
+- ADLs independent, Mobility unaided
+- Smoking:
+- Alcohol:
+
+O/E:
+- A) Patent
+- RS) RR XX, no cyanosis / clubbing / lymphad, SpO2 XX%, trachea C, exp =, clear chest,
+- CVS) HR XX reg, cap rf 2s, JVP normal, HS 1 + 2 + nil, calves soft, no oedema
+- Neuro)
+  GCS 15 E4V5M6
+  Pupils: 4 + 4 EARL,
+  CN II: fields full, fundi NAD
+  CN III/IV/VI: intact, no nystagmus, no diplopia.
+  CN V: intact, Vc 5/5 power
+  CN VII: intact
+  CN VIII>XI: intact
+  Arms: Normal tone, no drift. Power prox 5/5 + 5/5, dist 5/5 + 5/5. Reflexes B++S++T++ | B++S++T++, sensation lt touch intact, co-ordination normal
+  Legs: Normal tone, no clonus, power prox 5/5 + 5/5 dist 5/5 + 5/5, Reflexes Pat++Cal+Plant=D, Pat++Cal+Plant=D, sensation lt touch NAD, propriocep NAD. Negative Kernigs
+- GI) No pallor, no jaundice, no masses, abdo soft non-tender, BS normal
+
+FAST U/S:
+[Good / Moderate / Poor views]
+- RUQ) Liver NAD, kidney NAD, pleura NAD, no FF, gallbladder NAD
+- Midline) No pericard effusion, aortic diameter &lt;2.5cm max dia, no FF
+- LUQ) Spleen NAD, kidney NAD, pleura NAD, no FF
+- Suprapub) Bladder full NAD, no FF
+
+Cardiac U/S:
+[Good / Moderate / Poor views]
+- PLAx)
+- PSAx)
+- Ap4Ch)
+
+Ix:
+- ECG:
+- Bloods:
+  * FBC: NAD
+  * UEs: NAD
+  * LFTs: NAD
+  * CRP:
+  * VBG:
+- ABG:
+  * pH 
+  * pCO2
+  * pO2
+  * HCO3-
+  * BE
+  * Lac
+  * Glu
+- Urine:
+
+Imp//
+- 
+
+Plan//
+1) 
+2) 
+3) 
+</textarea>
+
+
+
+<h2 id="paeds-title">Paediatric General</h2>
+<textarea name="paeds" rows=10 cols=80>
+PC:
+1) 
+[Seen with mother / father]
+
+PCHx:
+- 
+- 
+- 
+- 
+- Denies: Fevers, headache, seizures, ear tugging, sore throat, cough, SOB, vomiting, abdo pain, diarrhoea, dysuria, rashes
+
+
+PMHx:
+- Delivery: NVD / Caesarian, premature / induced / at term 
+- 
+- 
+- 
+
+DHx:
+- 
+- 
+- 
+- 
+Immunisations:
+Allergies: NKDA
+
+SHx:
+- House with mother + father + ? siblings
+- No smokers in house
+- Milestones: good / delayed
+
+O/E:
+- Well, alert / sleeping + rousible.
+- A) Patent
+- RS) RR XX, no cyanosis / recessions / tug, SpO2 XX%, clear chest,
+- CVS) HR XX reg, cap rf &lt;2s, mucous membranes moist, fontanelles soft non-sunken, HS 1 + 2 + nil
+- Neuro)
+  pGCS 15 E4V5M6
+  Pupils: 4 + 4 EARL,
+  CN III/IV/VI: intact, no nystagmus, no diplopia.
+  CN V: intact, Vc 5/5 power
+  CN VII: intact
+  CN VIII>XI: intact
+  Arms: Normal tone. Power 5/5 + 5/5.
+  Legs: Normal tone, power 5/5 + 5/5. Negative Kernigs.
+- GI) No pallor, no jaundice, no masses, abdo soft non-tender, BS normal
+- ENT)
+  * Ears: Normal pinnae, R tymp memb normal, L tymp memb normal, no effusions
+  * Throat: No erythema, no tonsillar swelling, no exudate
+- No rashes on face, trunk, arms, nor legs
+
+Ix:
+- Urine:
+
+Imp//
+- 
+
+Plan//
+1) 
+2) 
+3) 
+</textarea>	
+
+
+
+<h2 id="bloods-title">Bloods Condenser</h2>
+<table>
+	<tr>
+		<td>
+			<textarea id="bloods" name="bloods" rows=10 cols=40 placeholder="Paste results here"></textarea>
+		</td>
+		<td>
+			<button id="bloods-process" onclick="condense_bloods()">
+				>> Condense
+			</button>
+		</td>
+		<td>
+			<textarea id="bloods-condensed" name="bloods-condensed" rows=10 cols=40 placeholder="Condensed results will appear here"></textarea>
+		</td>
+	</tr>
+</table>
+
+
+	
+<h2 id="discharge-title">Discharge</h2>
+<textarea name="discharge" rows=10 cols=80>
+R/V Pt:
+- 
+- 
+
+R/V results:
+-
+
+Imp//
+
+Advice given:
+-
+-
+
+Medications given:
+-
+-
+-
+
+Mr/Mrs --- asserts that he/she is NOT allergic to XX
+
+Plan//
+1) Return SOS. Pt happy with plan. Family happy with plan.
+</textarea>
+	
+</body>
+
